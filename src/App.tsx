@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import emailjs from "@emailjs/browser";
 import heroVideo from "./assets/heroVideo.mov";
 import couple1 from "./assets/couple/20250329_095610.jpg";
 import couple2 from "./assets/couple/20250329_095616.jpg";
