@@ -828,169 +828,293 @@ export default function App() {
       </Box>
 
       {/* ── DRESS CODE ──────────────────────────────── */}
-      <Box id="dress-code" sx={{ py: 10, background: "#FFF8F0" }}>
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: "center", mb: 7 }}>
-            <Typography sx={{ fontSize: "2.5rem", mb: 1 }}>👗</Typography>
+      <Box
+        id="dress-code"
+        sx={{
+          py: 12,
+          position: "relative",
+          overflow: "hidden",
+          background: "linear-gradient(160deg, #1a0a05 0%, #2d1200 30%, #1f3a2a 70%, #0e2016 100%)",
+        }}
+      >
+        {/* Decorative background glows */}
+        <Box sx={{ position: "absolute", top: "-5%", left: "-5%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,106,42,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <Box sx={{ position: "absolute", bottom: "0%", right: "-5%", width: 450, height: 450, borderRadius: "50%", background: "radial-gradient(circle, rgba(31,107,58,0.15) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <Box sx={{ position: "absolute", top: "40%", right: "20%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(194,24,91,0.08) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <Box sx={{ position: "absolute", top: "15%", left: "30%", width: 250, height: 250, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
+
+        <Container maxWidth="lg" sx={{ position: "relative" }}>
+          {/* ── Section Header ── */}
+          <Box sx={{ textAlign: "center", mb: 8 }}>
+            <Typography sx={{ fontSize: "3rem", mb: 1, lineHeight: 1 }}>👗</Typography>
             <Typography
               sx={{
                 fontFamily: "'Cormorant Garamond',serif",
-                fontSize: { xs: "2rem", md: "3rem" },
-                fontWeight: 600,
-                color: "#2C553D",
+                fontSize: { xs: "2.2rem", md: "3.2rem" },
+                fontWeight: 700,
+                color: "#fff",
+                letterSpacing: 1,
               }}
             >
               Dress Code
             </Typography>
-            <Box className="section-divider" />
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1.5, mt: 1.5 }}>
+              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, transparent, rgba(245,166,35,0.6))" }} />
+              <Typography sx={{ fontSize: "0.9rem", lineHeight: 1 }}>🌺</Typography>
+              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, rgba(245,106,42,0.6), transparent)" }} />
+            </Box>
             <Typography
               sx={{
-                color: "#8B7355",
+                color: "rgba(255,255,255,0.5)",
                 fontStyle: "italic",
                 mt: 2,
-                fontSize: "0.95rem",
+                fontSize: "0.9rem",
+                letterSpacing: 1.5,
+                textTransform: "uppercase",
               }}
             >
-              Semi-Formal · Summer Chic · Tropical
+              Semi-Formal · Tropical Vibe · Summer Chic
             </Typography>
           </Box>
 
-          {/* ── Entourage ── */}
-          <Typography
+          {/* ── Color Palette ── */}
+          <Box
             sx={{
-              fontFamily: "'Cormorant Garamond',serif",
-              fontSize: "1.6rem",
-              fontWeight: 600,
-              color: "#2C553D",
-              mb: 3,
+              borderRadius: 4,
+              border: "1px solid rgba(255,255,255,0.1)",
+              p: { xs: 3, md: 5 },
+              mb: 8,
               textAlign: "center",
-              letterSpacing: 1,
+              background: "rgba(255,255,255,0.04)",
+              backdropFilter: "blur(8px)",
             }}
           >
-            Entourage
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: "'Cormorant Garamond',serif",
+                fontSize: "1.6rem",
+                fontWeight: 600,
+                color: "#fff",
+                mb: 0.5,
+              }}
+            >
+              Event Color Palette
+            </Typography>
+            <Typography sx={{ color: "rgba(255,255,255,0.45)", fontSize: "0.83rem", mb: 4, letterSpacing: 1, textTransform: "uppercase" }}>
+              Please dress within these colors
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: { xs: 3, md: 5 },
+              }}
+            >
+              {[
+                { name: "Deep Green", hex: "#1f6b3a" },
+                { name: "Soft Beige", hex: "#d8cfc0" },
+                { name: "Coral", hex: "#f56a2a" },
+                { name: "Berry", hex: "#c2185b" },
+                { name: "Gold", hex: "#f5a623" },
+              ].map(({ name, hex }) => (
+                <Box key={hex} sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 1.2 }}>
+                  <Box
+                    sx={{
+                      width: 70,
+                      height: 70,
+                      borderRadius: "50%",
+                      background: hex,
+                      boxShadow: `0 0 0 3px rgba(255,255,255,0.12), 0 0 0 6px ${hex}40, 0 8px 24px ${hex}60`,
+                      transition: "transform 0.2s",
+                      "&:hover": { transform: "scale(1.1)" },
+                    }}
+                  />
+                  <Typography sx={{ fontWeight: 600, fontSize: "0.82rem", color: "#fff" }}>
+                    {name}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "0.7rem",
+                      color: "rgba(255,255,255,0.4)",
+                      letterSpacing: 1,
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {hex}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+
+          {/* ── Entourage ── */}
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2, mb: 4 }}>
+            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15))" }} />
+            <Typography
+              sx={{
+                fontFamily: "'Cormorant Garamond',serif",
+                fontSize: "1.8rem",
+                fontWeight: 600,
+                color: "#fff",
+                letterSpacing: 2,
+                whiteSpace: "nowrap",
+              }}
+            >
+              Entourage
+            </Typography>
+            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(255,255,255,0.15), transparent)" }} />
+          </Box>
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: { xs: "1fr 1fr", md: "repeat(4,1fr)" },
-              gap: 2.5,
-              mb: 7,
+              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+              gap: 3,
+              mb: 8,
             }}
           >
-            {[
-              {
-                role: "Principal Sponsors",
-                gender: "Girls",
-                color: "Emerald Green",
-                icon: "💚",
-                detail: "Emerald green formal gown",
-              },
-              {
-                role: "Principal Sponsors",
-                gender: "Boys",
-                color: "Barong",
-                icon: "🤵",
-                detail: "Traditional Filipino Barong Tagalog",
-              },
-              {
-                role: "Secondary Sponsors",
-                gender: "Girls",
-                color: "Magenta",
-                icon: "💗",
-                detail: "Magenta formal gown",
-              },
-              {
-                role: "Secondary Sponsors",
-                gender: "Boys",
-                color: "Barong",
-                icon: "🤵",
-                detail: "Traditional Filipino Barong Tagalog",
-              },
-            ].map(({ role, gender, color, icon, detail }) => (
-              <Paper
-                key={role + gender}
-                elevation={0}
+            {/* Entourage Girls */}
+            <Box
+              sx={{
+                borderRadius: 4,
+                overflow: "hidden",
+                border: "1px solid rgba(194,24,91,0.3)",
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Box
                 sx={{
-                  borderRadius: 3,
-                  overflow: "hidden",
-                  border: "1px solid rgba(92,158,123,0.2)",
+                  background: "linear-gradient(135deg,#7b0039,#c2185b,#f56a2a)",
+                  p: 3,
                   textAlign: "center",
                 }}
               >
-                <Box
+                <Typography sx={{ fontSize: "2.5rem", lineHeight: 1, mb: 1 }}>💃</Typography>
+                <Typography
                   sx={{
-                    background:
-                      color === "Emerald Green"
-                        ? "linear-gradient(135deg,#1a6b3a,#2d9e55)"
-                        : color === "Magenta"
-                          ? "linear-gradient(135deg,#b5006b,#e0409a)"
-                          : "linear-gradient(135deg,#3d2b1f,#6b4c35)",
-                    py: 3,
+                    fontFamily: "'Cormorant Garamond',serif",
+                    color: "#fff",
+                    fontSize: "1.5rem",
+                    fontWeight: 700,
                   }}
                 >
-                  <Typography sx={{ fontSize: "2.5rem" }}>{icon}</Typography>
-                </Box>
-                <Box sx={{ p: 2 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "'Cormorant Garamond',serif",
-                      fontWeight: 600,
-                      color: "#2C553D",
-                      fontSize: "1rem",
-                      mb: 0.5,
-                    }}
-                  >
-                    {role}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#8B7355",
-                      fontSize: "0.78rem",
-                      textTransform: "uppercase",
-                      letterSpacing: 1,
-                      mb: 1,
-                    }}
-                  >
-                    {gender}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#3D2B1F",
-                      fontWeight: 700,
-                      fontSize: "0.9rem",
-                      mb: 0.5,
-                    }}
-                  >
-                    {color}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#8B7355",
-                      fontSize: "0.82rem",
-                      fontStyle: "italic",
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {detail}
+                  Girls
+                </Typography>
+                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.18)", borderRadius: 10, px: 2, py: 0.4, mt: 1 }}>
+                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+                    Semi-Formal · Tropical Vibe
                   </Typography>
                 </Box>
-              </Paper>
-            ))}
+              </Box>
+              <Box sx={{ p: 3, flexGrow: 1 }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    background: "rgba(194,24,91,0.12)",
+                    border: "1px solid rgba(194,24,91,0.3)",
+                    borderRadius: 2,
+                    px: 2,
+                    py: 1,
+                    mb: 2.5,
+                  }}
+                >
+                  <Typography sx={{ fontSize: "1rem" }}>🎁</Typography>
+                  <Typography sx={{ fontSize: "0.82rem", color: "#f48fb1", fontWeight: 600 }}>
+                    Attire will be provided
+                  </Typography>
+                </Box>
+                <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "0.87rem", lineHeight: 1.8 }}>
+                  Entourage ladies will be dressed in the event color palette. No additional outfit needed — attire is fully taken care of.
+                </Typography>
+              </Box>
+            </Box>
+
+            {/* Entourage Boys */}
+            <Box
+              sx={{
+                borderRadius: 4,
+                overflow: "hidden",
+                border: "1px solid rgba(107,76,53,0.4)",
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Box
+                sx={{
+                  background: "linear-gradient(135deg,#1a0d07,#3d2b1f,#6b4c35)",
+                  p: 3,
+                  textAlign: "center",
+                }}
+              >
+                <Typography sx={{ fontSize: "2.5rem", lineHeight: 1, mb: 1 }}>🤵</Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "'Cormorant Garamond',serif",
+                    color: "#fff",
+                    fontSize: "1.5rem",
+                    fontWeight: 700,
+                  }}
+                >
+                  Boys
+                </Typography>
+                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.12)", borderRadius: 10, px: 2, py: 0.4, mt: 1 }}>
+                  <Typography sx={{ color: "#f5deb3", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+                    Barong Tagalog
+                  </Typography>
+                </Box>
+              </Box>
+              <Box sx={{ p: 3, flexGrow: 1 }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    background: "rgba(107,76,53,0.2)",
+                    border: "1px solid rgba(107,76,53,0.4)",
+                    borderRadius: 2,
+                    px: 2,
+                    py: 1,
+                    mb: 2.5,
+                  }}
+                >
+                  <Typography sx={{ fontSize: "1rem" }}>🎁</Typography>
+                  <Typography sx={{ fontSize: "0.82rem", color: "#d4a96a", fontWeight: 600 }}>
+                    Attire will be provided
+                  </Typography>
+                </Box>
+                <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "0.87rem", lineHeight: 1.8 }}>
+                  Entourage gentlemen will wear the traditional Filipino Barong Tagalog. Attire is coordinated and fully provided.
+                </Typography>
+              </Box>
+            </Box>
           </Box>
 
           {/* ── Guests ── */}
-          <Typography
-            sx={{
-              fontFamily: "'Cormorant Garamond',serif",
-              fontSize: "1.6rem",
-              fontWeight: 600,
-              color: "#2C553D",
-              mb: 3,
-              textAlign: "center",
-              letterSpacing: 1,
-            }}
-          >
-            Guests
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2, mb: 1 }}>
+            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15))" }} />
+            <Typography
+              sx={{
+                fontFamily: "'Cormorant Garamond',serif",
+                fontSize: "1.8rem",
+                fontWeight: 600,
+                color: "#fff",
+                letterSpacing: 2,
+                whiteSpace: "nowrap",
+              }}
+            >
+              Guests
+            </Typography>
+            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(255,255,255,0.15), transparent)" }} />
+          </Box>
+          <Typography sx={{ textAlign: "center", color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", mb: 5, letterSpacing: 1, textTransform: "uppercase" }}>
+            Attire not provided — please dress within the color palette
           </Typography>
           <Box
             sx={{
@@ -999,161 +1123,136 @@ export default function App() {
               gap: 4,
             }}
           >
-            {/* Women */}
-            <Paper
-              elevation={0}
+            {/* Guest Women */}
+            <Box
               sx={{
-                borderRadius: 3,
+                borderRadius: 4,
                 overflow: "hidden",
-                border: "1px solid rgba(92,158,123,0.2)",
+                border: "1px solid rgba(200,149,108,0.25)",
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               <Box
                 sx={{
-                  background: "linear-gradient(135deg,#C8956C,#F4A261)",
-                  p: 2.5,
+                  background: "linear-gradient(135deg,#7a2e00,#c2641a,#f4a261)",
+                  p: 3.5,
                   textAlign: "center",
                 }}
               >
+                <Typography sx={{ fontSize: "3rem", lineHeight: 1, mb: 1 }}>👒</Typography>
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond',serif",
                     color: "#fff",
-                    fontSize: "1.3rem",
-                    fontWeight: 600,
+                    fontSize: "1.7rem",
+                    fontWeight: 700,
+                    letterSpacing: 0.5,
                   }}
                 >
                   Women
                 </Typography>
-                <Typography
-                  sx={{
-                    color: "rgba(255,255,255,0.85)",
-                    fontSize: "0.8rem",
-                    letterSpacing: 2,
-                    textTransform: "uppercase",
-                    mt: 0.5,
-                  }}
-                >
-                  Semi-Formal · Summer Chic
-                </Typography>
-              </Box>
-              <Box className="dress-image-slot">
-                <img
-                  src="/dress-women.jpg"
-                  alt="Women's dress code — Semi-Formal Summer Chic"
-                />
-              </Box>
-              <Box sx={{ p: 3 }}>
-                <Box
-                  component="ul"
-                  sx={{
-                    pl: 2,
-                    m: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 0.75,
-                  }}
-                >
-                  {[
-                    "Please refrain from wearing white, black, or dark green — reserved for the wedding party",
-                    "Summer colors and patterns encouraged",
-                    "Midi or floor-length dresses or jumpsuits",
-                    "Lightweight materials encouraged",
-                    "Dressy sandals okay",
-                  ].map((item) => (
-                    <Box
-                      component="li"
-                      key={item}
-                      sx={{
-                        color: "#6B5744",
-                        fontSize: "0.88rem",
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      {item}
-                    </Box>
-                  ))}
+                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.18)", borderRadius: 10, px: 2.5, py: 0.5, mt: 1 }}>
+                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+                    Semi-Formal · Summer Chic
+                  </Typography>
                 </Box>
               </Box>
-            </Paper>
+              <Box sx={{ p: 3.5, flexGrow: 1 }}>
+                {[
+                  { icon: "✨", text: "Semi-formal, summer chic style" },
+                  { icon: "🎨", text: "Dress within the event color palette" },
+                  { icon: "🤍", text: "Please avoid white — reserved for the bride" },
+                  { icon: "👗", text: "Midi or floor-length dresses or jumpsuits" },
+                  { icon: "🌿", text: "Lightweight, breathable fabrics encouraged" },
+                  { icon: "👡", text: "Dressy sandals are perfectly fine" },
+                ].map(({ icon, text }) => (
+                  <Box
+                    key={text}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1.5,
+                      py: 1.1,
+                      borderBottom: "1px solid rgba(200,149,108,0.1)",
+                      "&:last-child": { borderBottom: "none" },
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "1.1rem", flexShrink: 0 }}>{icon}</Typography>
+                    <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.87rem", lineHeight: 1.6 }}>
+                      {text}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
 
-            {/* Men */}
-            <Paper
-              elevation={0}
+            {/* Guest Men */}
+            <Box
               sx={{
-                borderRadius: 3,
+                borderRadius: 4,
                 overflow: "hidden",
-                border: "1px solid rgba(92,158,123,0.2)",
+                border: "1px solid rgba(44,85,61,0.3)",
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               <Box
                 sx={{
-                  background: "linear-gradient(135deg,#2C553D,#5C9E7B)",
-                  p: 2.5,
+                  background: "linear-gradient(135deg,#0a1f14,#1a3d2b,#5C9E7B)",
+                  p: 3.5,
                   textAlign: "center",
                 }}
               >
+                <Typography sx={{ fontSize: "3rem", lineHeight: 1, mb: 1 }}>👔</Typography>
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond',serif",
                     color: "#fff",
-                    fontSize: "1.3rem",
-                    fontWeight: 600,
+                    fontSize: "1.7rem",
+                    fontWeight: 700,
+                    letterSpacing: 0.5,
                   }}
                 >
                   Men
                 </Typography>
-                <Typography
-                  sx={{
-                    color: "rgba(255,255,255,0.85)",
-                    fontSize: "0.8rem",
-                    letterSpacing: 2,
-                    textTransform: "uppercase",
-                    mt: 0.5,
-                  }}
-                >
-                  Tropical Smart Casual
-                </Typography>
-              </Box>
-              <Box className="dress-image-slot">
-                <img
-                  src="/dress-men.jpg"
-                  alt="Men's dress code — Tropical Smart Casual"
-                />
-              </Box>
-              <Box sx={{ p: 3 }}>
-                <Box
-                  component="ul"
-                  sx={{
-                    pl: 2,
-                    m: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 0.75,
-                  }}
-                >
-                  {[
-                    "Linen or lightweight button-down shirts in pastel or tropical tones",
-                    "Slacks or chino trousers preferred",
-                    "Avoid plain white shirts or dark formal suits",
-                    "Loafers, boat shoes, or dressy sandals encouraged",
-                    "Barong Tagalog also welcome",
-                  ].map((item) => (
-                    <Box
-                      component="li"
-                      key={item}
-                      sx={{
-                        color: "#6B5744",
-                        fontSize: "0.88rem",
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      {item}
-                    </Box>
-                  ))}
+                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.12)", borderRadius: 10, px: 2.5, py: 0.5, mt: 1 }}>
+                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+                    Smart Casual · Resort Formal
+                  </Typography>
                 </Box>
               </Box>
-            </Paper>
+              <Box sx={{ p: 3.5, flexGrow: 1 }}>
+                {[
+                  { icon: "✨", text: "Smart casual or resort formal style" },
+                  { icon: "🎨", text: "Dress within the event color palette" },
+                  { icon: "👕", text: "Linen or lightweight button-down shirts in tropical tones" },
+                  { icon: "👖", text: "Slacks or chino trousers preferred" },
+                  { icon: "👞", text: "Loafers, boat shoes, or dressy sandals encouraged" },
+                ].map(({ icon, text }) => (
+                  <Box
+                    key={text}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1.5,
+                      py: 1.1,
+                      borderBottom: "1px solid rgba(44,85,61,0.15)",
+                      "&:last-child": { borderBottom: "none" },
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "1.1rem", flexShrink: 0 }}>{icon}</Typography>
+                    <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.87rem", lineHeight: 1.6 }}>
+                      {text}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
           </Box>
         </Container>
       </Box>
