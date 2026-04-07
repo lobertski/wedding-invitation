@@ -36,7 +36,7 @@ import "./App.css";
 
 const tropicalTheme = createTheme({
   palette: {
-    primary: { main: "#2C553D", contrastText: "#fff" },
+    primary: { main: "#5a4230", contrastText: "#fff" },
     secondary: { main: "#E76F51", contrastText: "#fff" },
     background: { default: "#FFF8F0" },
   },
@@ -55,14 +55,14 @@ const tropicalTheme = createTheme({
           "& .MuiOutlinedInput-root": {
             borderRadius: 10,
             "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#5C9E7B",
+              borderColor: "#c4a882",
             },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#2C553D",
+              borderColor: "#5a4230",
             },
           },
           "& .MuiInputLabel-root.Mui-focused": {
-            color: "#2C553D",
+            color: "#5a4230",
           },
         },
       },
@@ -169,10 +169,10 @@ export default function App() {
     canvas.height = window.innerHeight;
 
     const COLORS = [
-      "#2C553D",
+      "#5a4230",
       "#E76F51",
       "#F4A261",
-      "#5C9E7B",
+      "#c4a882",
       "#FFD700",
       "#FF69B4",
       "#87CEEB",
@@ -222,7 +222,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const target = new Date("2026-09-26T10:00:00");
+    const target = new Date("2026-09-26T15:00:00");
     const tick = () => {
       const diff = target.getTime() - Date.now();
       if (diff <= 0) return;
@@ -362,7 +362,7 @@ export default function App() {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <Box sx={{ width: 240, pt: 2, background: "#1a3d2b", height: "100%" }}>
+        <Box sx={{ width: 240, pt: 2, background: "#2b1f14", height: "100%" }}>
           <Typography
             sx={{
               fontFamily: "'Great Vibes', cursive",
@@ -516,20 +516,11 @@ export default function App() {
         id="our-story"
         sx={{
           py: 10,
-          background: "linear-gradient(160deg, #eaf5ee 0%, #fff8f0 45%, #fef3e2 100%)",
+          background: "#FFF7E8",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Decorative tropical blobs */}
-        <Box sx={{
-          position: "absolute", top: -60, right: -60, width: 260, height: 260,
-          borderRadius: "50%", background: "rgba(92,158,123,0.08)", pointerEvents: "none",
-        }} />
-        <Box sx={{
-          position: "absolute", bottom: -80, left: -80, width: 320, height: 320,
-          borderRadius: "50%", background: "rgba(244,162,97,0.07)", pointerEvents: "none",
-        }} />
 
         <Container maxWidth="lg" sx={{ position: "relative" }}>
           <Box sx={{ textAlign: "center", mb: 7 }}>
@@ -539,7 +530,7 @@ export default function App() {
                 fontFamily: "'Cormorant Garamond',serif",
                 fontSize: { xs: "2.2rem", md: "3.2rem" },
                 fontWeight: 700,
-                color: "#2C553D",
+                color: "#5a4230",
                 letterSpacing: 1,
                 mb: 0.5,
               }}
@@ -548,7 +539,7 @@ export default function App() {
             </Typography>
             {/* Tropical divider */}
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1.5, mt: 1.5 }}>
-              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #5C9E7B)", borderRadius: 2 }} />
+              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #c4a882)", borderRadius: 2 }} />
               <Typography sx={{ fontSize: "1.1rem", lineHeight: 1 }}>🌺</Typography>
               <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, #F4A261, transparent)", borderRadius: 2 }} />
             </Box>
@@ -588,7 +579,7 @@ export default function App() {
                       fontFamily: "'Cormorant Garamond',serif",
                       fontSize: "1.55rem",
                       fontWeight: 700,
-                      color: "#2C553D",
+                      color: "#5a4230",
                       mb: 1.5,
                       letterSpacing: 0.5,
                     }}
@@ -617,32 +608,29 @@ export default function App() {
         id="details"
         sx={{
           py: 12,
-          background: "linear-gradient(160deg, #0d2318 0%, #122b1e 45%, #0e2117 100%)",
+          background: "#FFF7E8",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Subtle radial glow accents */}
-        <Box sx={{ position: "absolute", top: "10%", left: "5%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(92,158,123,0.08) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", bottom: "5%", right: "0%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(244,162,97,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+
 
         <Container maxWidth="lg" sx={{ position: "relative" }}>
 
           {/* Section Header */}
           <Box sx={{ textAlign: "center", mb: 8 }}>
-            {/* Decorative date stamp */}
             <Box sx={{
               display: "inline-flex", flexDirection: "column", alignItems: "center",
-              border: "1px solid rgba(244,162,97,0.3)", borderRadius: 3, px: 4, py: 2, mb: 4,
-              background: "rgba(244,162,97,0.05)",
+              border: "1px solid rgba(90,66,48,0.2)", borderRadius: 3, px: 4, py: 2, mb: 4,
+              background: "rgba(90,66,48,0.05)",
             }}>
-              <Typography sx={{ color: "rgba(244,162,97,0.7)", fontSize: "0.65rem", letterSpacing: 4, textTransform: "uppercase", fontWeight: 600, mb: 0.5 }}>
+              <Typography sx={{ color: "#5a4230", fontSize: "0.65rem", letterSpacing: 4, textTransform: "uppercase", fontWeight: 600, mb: 0.5 }}>
                 Saturday
               </Typography>
-              <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", color: "#F4A261", fontSize: "2.8rem", fontWeight: 700, lineHeight: 1, letterSpacing: 2 }}>
+              <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", color: "#b5620a", fontSize: "2.8rem", fontWeight: 700, lineHeight: 1, letterSpacing: 2 }}>
                 26
               </Typography>
-              <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "0.65rem", letterSpacing: 3, textTransform: "uppercase", mt: 0.5 }}>
+              <Typography sx={{ color: "#9a8872", fontSize: "0.65rem", letterSpacing: 3, textTransform: "uppercase", mt: 0.5 }}>
                 September · 2026
               </Typography>
             </Box>
@@ -652,7 +640,7 @@ export default function App() {
                 fontFamily: "'Cormorant Garamond',serif",
                 fontSize: { xs: "2.4rem", md: "3.4rem" },
                 fontWeight: 700,
-                color: "#fff",
+                color: "#3b2f1e",
                 letterSpacing: 1,
                 lineHeight: 1.1,
               }}
@@ -660,33 +648,33 @@ export default function App() {
               Wedding Details
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2, mt: 2 }}>
-              <Box sx={{ width: 60, height: 1, background: "linear-gradient(90deg, transparent, rgba(92,158,123,0.6))" }} />
+              <Box sx={{ width: 60, height: 2, background: "linear-gradient(90deg, transparent, #c4a882)", borderRadius: 2 }} />
               <Typography sx={{ fontSize: "1rem", lineHeight: 1 }}>🌺</Typography>
-              <Box sx={{ width: 60, height: 1, background: "linear-gradient(90deg, rgba(244,162,97,0.6), transparent)" }} />
+              <Box sx={{ width: 60, height: 2, background: "linear-gradient(90deg, #F4A261, transparent)", borderRadius: 2 }} />
             </Box>
-            <Typography sx={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", mt: 2, letterSpacing: 2, textTransform: "uppercase" }}>
+            <Typography sx={{ color: "#9a8872", fontSize: "0.82rem", mt: 2, letterSpacing: 2, textTransform: "uppercase" }}>
               Bantayan Island, Cebu, Philippines
             </Typography>
           </Box>
 
-          {/* Venue Cards — stacked vertically, full-width horizontal split */}
+          {/* Venue Cards */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
 
             {/* Ceremony Card */}
             <Paper className="venue-card" elevation={0}
-              sx={{ background: "linear-gradient(135deg, #1a3d2b 0%, #1e4d34 100%) !important" }}
+              sx={{ background: "#fff !important", border: "1px solid rgba(90,66,48,0.15) !important", boxShadow: "0 4px 24px rgba(90,66,48,0.1) !important" }}
             >
               <Box className="venue-info-panel">
-                <Box className="venue-type-tag" sx={{ background: "rgba(92,158,123,0.15)", borderColor: "rgba(92,158,123,0.35)" }}>
+                <Box className="venue-type-tag" sx={{ background: "rgba(90,66,48,0.08)", borderColor: "rgba(90,66,48,0.2)" }}>
                   <Typography sx={{ fontSize: "0.85rem" }}>⛪</Typography>
-                  <Typography sx={{ color: "#7dc9a0", fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
+                  <Typography sx={{ color: "#5a4230", fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
                     Ceremony
                   </Typography>
                 </Box>
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
+                    color: "#3b2f1e",
                     fontSize: { xs: "1.6rem", md: "2rem" },
                     fontWeight: 700,
                     lineHeight: 1.15,
@@ -697,15 +685,15 @@ export default function App() {
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 1 }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
-                    <PlaceIcon sx={{ fontSize: 16, color: "#7dc9a0" }} />
-                    <Typography sx={{ color: "rgba(255,255,255,0.65)", fontSize: "0.85rem" }}>
+                    <PlaceIcon sx={{ fontSize: 16, color: "#5a4230" }} />
+                    <Typography sx={{ color: "#6b5e4f", fontSize: "0.85rem" }}>
                       Bantayan, Cebu
                     </Typography>
                   </Box>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
-                    <Typography sx={{ fontSize: "0.9rem", width: 16, textAlign: "center" }}>🕙</Typography>
-                    <Typography sx={{ color: "#F4A261", fontSize: "0.9rem", fontWeight: 700, letterSpacing: 0.5 }}>
-                      10:00 AM
+                    <Typography sx={{ fontSize: "0.9rem", width: 16, textAlign: "center" }}>🕒</Typography>
+                    <Typography sx={{ color: "#b5620a", fontSize: "0.9rem", fontWeight: 700, letterSpacing: 0.5 }}>
+                      3:00 PM
                     </Typography>
                   </Box>
                 </Box>
@@ -714,10 +702,10 @@ export default function App() {
                   target="_blank" rel="noopener noreferrer"
                   className="venue-directions-btn"
                   sx={{
-                    color: "#7dc9a0",
-                    borderColor: "rgba(125,201,160,0.4) !important",
-                    background: "rgba(125,201,160,0.08) !important",
-                    "&:hover": { background: "rgba(125,201,160,0.18) !important", borderColor: "#7dc9a0 !important" },
+                    color: "#5a4230",
+                    borderColor: "rgba(90,66,48,0.35) !important",
+                    background: "rgba(90,66,48,0.06) !important",
+                    "&:hover": { background: "rgba(90,66,48,0.12) !important", borderColor: "#5a4230 !important" },
                   }}
                 >
                   <PlaceIcon sx={{ fontSize: 14 }} /> Get Directions <OpenInNewIcon sx={{ fontSize: 12 }} />
@@ -736,19 +724,19 @@ export default function App() {
 
             {/* Reception Card */}
             <Paper className="venue-card" elevation={0}
-              sx={{ background: "linear-gradient(135deg, #0a2e3d 0%, #0c3a4e 100%) !important" }}
+              sx={{ background: "#fff !important", border: "1px solid rgba(90,66,48,0.15) !important", boxShadow: "0 4px 24px rgba(90,66,48,0.1) !important" }}
             >
               <Box className="venue-info-panel">
-                <Box className="venue-type-tag" sx={{ background: "rgba(26,155,181,0.12)", borderColor: "rgba(26,155,181,0.3)" }}>
+                <Box className="venue-type-tag" sx={{ background: "rgba(181,98,10,0.08)", borderColor: "rgba(181,98,10,0.25)" }}>
                   <Typography sx={{ fontSize: "0.85rem" }}>🥂</Typography>
-                  <Typography sx={{ color: "#60c4de", fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
+                  <Typography sx={{ color: "#b5620a", fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
                     Reception
                   </Typography>
                 </Box>
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
+                    color: "#3b2f1e",
                     fontSize: { xs: "1.6rem", md: "2rem" },
                     fontWeight: 700,
                     lineHeight: 1.15,
@@ -759,15 +747,15 @@ export default function App() {
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 1 }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
-                    <PlaceIcon sx={{ fontSize: 16, color: "#60c4de" }} />
-                    <Typography sx={{ color: "rgba(255,255,255,0.65)", fontSize: "0.85rem" }}>
+                    <PlaceIcon sx={{ fontSize: 16, color: "#5a4230" }} />
+                    <Typography sx={{ color: "#6b5e4f", fontSize: "0.85rem" }}>
                       Santa Fe, Bantayan Island, Cebu
                     </Typography>
                   </Box>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
-                    <Typography sx={{ fontSize: "0.9rem", width: 16, textAlign: "center" }}>🕛</Typography>
-                    <Typography sx={{ color: "#F4A261", fontSize: "0.9rem", fontWeight: 700, letterSpacing: 0.5 }}>
-                      12:00 PM
+                    <Typography sx={{ fontSize: "0.9rem", width: 16, textAlign: "center" }}>🕕</Typography>
+                    <Typography sx={{ color: "#b5620a", fontSize: "0.9rem", fontWeight: 700, letterSpacing: 0.5 }}>
+                      6:00 PM
                     </Typography>
                   </Box>
                 </Box>
@@ -776,10 +764,10 @@ export default function App() {
                   target="_blank" rel="noopener noreferrer"
                   className="venue-directions-btn"
                   sx={{
-                    color: "#60c4de",
-                    borderColor: "rgba(96,196,222,0.4) !important",
-                    background: "rgba(96,196,222,0.08) !important",
-                    "&:hover": { background: "rgba(96,196,222,0.16) !important", borderColor: "#60c4de !important" },
+                    color: "#b5620a",
+                    borderColor: "rgba(181,98,10,0.35) !important",
+                    background: "rgba(181,98,10,0.06) !important",
+                    "&:hover": { background: "rgba(181,98,10,0.12) !important", borderColor: "#b5620a !important" },
                   }}
                 >
                   <PlaceIcon sx={{ fontSize: 14 }} /> Get Directions <OpenInNewIcon sx={{ fontSize: 12 }} />
@@ -800,23 +788,23 @@ export default function App() {
           {/* Day-of Timeline */}
           <Box className="day-timeline">
             {[
-              { emoji: "⛪", time: "10:00 AM", label: "Ceremony", color: "#7dc9a0" },
+              { emoji: "⛪", time: "3:00 PM", label: "Ceremony", color: "#5a4230" },
               { emoji: "🌺", time: "", label: "", color: "#F4A261", small: true },
-              { emoji: "🥂", time: "12:00 PM", label: "Reception", color: "#60c4de" },
+              { emoji: "🥂", time: "6:00 PM", label: "Reception", color: "#b5620a" },
               { emoji: "🌅", time: "", label: "", color: "#F4A261", small: true },
-              { emoji: "🎉", time: "Evening", label: "Celebration", color: "#F4A261" },
+              { emoji: "🎉", time: "Evening", label: "Celebration", color: "#c2185b" },
             ].map((item, i) =>
               item.small ? (
                 <Box key={i} className="day-timeline-line" />
               ) : (
                 <Box key={i} className="day-timeline-item">
-                  <Box className="day-timeline-dot" sx={{ background: `${item.color}18`, border: `1.5px solid ${item.color}55` }}>
+                  <Box className="day-timeline-dot" sx={{ background: `${item.color}14`, border: `1.5px solid ${item.color}44` }}>
                     <span>{item.emoji}</span>
                   </Box>
                   <Typography sx={{ color: item.color, fontWeight: 700, fontSize: "0.8rem", letterSpacing: 0.5 }}>
                     {item.time}
                   </Typography>
-                  <Typography sx={{ color: "rgba(255,255,255,0.45)", fontSize: "0.72rem", letterSpacing: 1.5, textTransform: "uppercase" }}>
+                  <Typography sx={{ color: "#9a8872", fontSize: "0.72rem", letterSpacing: 1.5, textTransform: "uppercase" }}>
                     {item.label}
                   </Typography>
                 </Box>
@@ -834,424 +822,236 @@ export default function App() {
           py: 12,
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(160deg, #1a0a05 0%, #2d1200 30%, #1f3a2a 70%, #0e2016 100%)",
+          background: "#FFF7E8",
         }}
       >
-        {/* Decorative background glows */}
-        <Box sx={{ position: "absolute", top: "-5%", left: "-5%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,106,42,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", bottom: "0%", right: "-5%", width: 450, height: 450, borderRadius: "50%", background: "radial-gradient(circle, rgba(31,107,58,0.15) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", top: "40%", right: "20%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(194,24,91,0.08) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", top: "15%", left: "30%", width: 250, height: 250, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-        <Container maxWidth="lg" sx={{ position: "relative" }}>
+
+        <Container maxWidth="md" sx={{ position: "relative" }}>
+
           {/* ── Section Header ── */}
-          <Box sx={{ textAlign: "center", mb: 8 }}>
-            <Typography sx={{ fontSize: "3rem", mb: 1, lineHeight: 1 }}>👗</Typography>
+          <Box sx={{ textAlign: "center", mb: { xs: 5, md: 7 } }}>
+            <Typography sx={{ color: "#9a8872", fontSize: "0.7rem", letterSpacing: 4, textTransform: "uppercase", fontWeight: 500, mb: 1.5 }}>
+              What to Wear
+            </Typography>
             <Typography
               sx={{
                 fontFamily: "'Cormorant Garamond',serif",
-                fontSize: { xs: "2.2rem", md: "3.2rem" },
-                fontWeight: 700,
-                color: "#fff",
-                letterSpacing: 1,
+                fontSize: { xs: "2.4rem", md: "3.6rem" },
+                fontWeight: 300,
+                color: "#3b2f1e",
+                lineHeight: 1.1,
               }}
             >
               Dress Code
             </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1.5, mt: 1.5 }}>
-              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, transparent, rgba(245,166,35,0.6))" }} />
-              <Typography sx={{ fontSize: "0.9rem", lineHeight: 1 }}>🌺</Typography>
-              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, rgba(245,106,42,0.6), transparent)" }} />
-            </Box>
-            <Typography
-              sx={{
-                color: "rgba(255,255,255,0.5)",
-                fontStyle: "italic",
-                mt: 2,
-                fontSize: "0.9rem",
-                letterSpacing: 1.5,
-                textTransform: "uppercase",
-              }}
-            >
-              Semi-Formal · Tropical Vibe · Summer Chic
+            <Box sx={{ width: 40, height: 1, background: "#c4a882", mx: "auto", mt: 2, mb: 2 }} />
+            <Typography sx={{ color: "#6b5e4f", fontSize: { xs: "0.85rem", md: "0.95rem" }, fontStyle: "italic" }}>
+              Semi-Formal &middot; Tropical Vibe &middot; Summer Chic
             </Typography>
           </Box>
 
-          {/* ── Color Palette ── */}
-          <Box
-            sx={{
-              borderRadius: 4,
-              border: "1px solid rgba(255,255,255,0.1)",
-              p: { xs: 3, md: 5 },
-              mb: 8,
-              textAlign: "center",
-              background: "rgba(255,255,255,0.04)",
-              backdropFilter: "blur(8px)",
-            }}
-          >
+          {/* ── Color Palette (horizontal ribbon) ── */}
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: { xs: 2, md: 3.5 }, mb: { xs: 2, md: 3 }, flexWrap: "wrap" }}>
+            {[
+              { name: "Deep Green", hex: "#1f6b3a" },
+              { name: "Soft Beige", hex: "#d8cfc0" },
+              { name: "Coral", hex: "#f56a2a" },
+              { name: "Berry", hex: "#c2185b" },
+              { name: "Gold", hex: "#f5a623" },
+            ].map(({ name, hex }) => (
+              <Box key={hex} sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0.75 }}>
+                <Box
+                  sx={{
+                    width: { xs: 44, md: 52 },
+                    height: { xs: 44, md: 52 },
+                    borderRadius: "50%",
+                    background: hex,
+                    border: "3px solid #FFF7E8",
+                    boxShadow: `0 0 0 1px ${hex}35`,
+                    transition: "transform 0.25s",
+                    "&:hover": { transform: "scale(1.15)" },
+                  }}
+                />
+                <Typography sx={{ fontSize: "0.68rem", color: "#6b5e4f", fontWeight: 500, letterSpacing: 0.3 }}>
+                  {name}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+          <Typography sx={{ textAlign: "center", color: "#9a8872", fontSize: "0.72rem", letterSpacing: 1.5, textTransform: "uppercase", mb: { xs: 6, md: 8 } }}>
+            Please dress within these colors
+          </Typography>
+
+          {/* ── Entourage Section ── */}
+          <Box sx={{ textAlign: "center", mb: 4 }}>
             <Typography
               sx={{
                 fontFamily: "'Cormorant Garamond',serif",
-                fontSize: "1.6rem",
-                fontWeight: 600,
-                color: "#fff",
+                fontSize: { xs: "1.8rem", md: "2.4rem" },
+                fontWeight: 300,
+                color: "#3b2f1e",
                 mb: 0.5,
-              }}
-            >
-              Event Color Palette
-            </Typography>
-            <Typography sx={{ color: "rgba(255,255,255,0.45)", fontSize: "0.83rem", mb: 4, letterSpacing: 1, textTransform: "uppercase" }}>
-              Please dress within these colors
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                gap: { xs: 3, md: 5 },
-              }}
-            >
-              {[
-                { name: "Deep Green", hex: "#1f6b3a" },
-                { name: "Soft Beige", hex: "#d8cfc0" },
-                { name: "Coral", hex: "#f56a2a" },
-                { name: "Berry", hex: "#c2185b" },
-                { name: "Gold", hex: "#f5a623" },
-              ].map(({ name, hex }) => (
-                <Box key={hex} sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 1.2 }}>
-                  <Box
-                    sx={{
-                      width: 70,
-                      height: 70,
-                      borderRadius: "50%",
-                      background: hex,
-                      boxShadow: `0 0 0 3px rgba(255,255,255,0.12), 0 0 0 6px ${hex}40, 0 8px 24px ${hex}60`,
-                      transition: "transform 0.2s",
-                      "&:hover": { transform: "scale(1.1)" },
-                    }}
-                  />
-                  <Typography sx={{ fontWeight: 600, fontSize: "0.82rem", color: "#fff" }}>
-                    {name}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: "0.7rem",
-                      color: "rgba(255,255,255,0.4)",
-                      letterSpacing: 1,
-                      fontFamily: "monospace",
-                    }}
-                  >
-                    {hex}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-          </Box>
-
-          {/* ── Entourage ── */}
-          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2, mb: 4 }}>
-            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15))" }} />
-            <Typography
-              sx={{
-                fontFamily: "'Cormorant Garamond',serif",
-                fontSize: "1.8rem",
-                fontWeight: 600,
-                color: "#fff",
-                letterSpacing: 2,
-                whiteSpace: "nowrap",
               }}
             >
               Entourage
             </Typography>
-            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(255,255,255,0.15), transparent)" }} />
-          </Box>
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
-              gap: 3,
-              mb: 8,
-            }}
-          >
-            {/* Entourage Girls */}
-            <Box
-              sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid rgba(194,24,91,0.3)",
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(6px)",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Box
-                sx={{
-                  background: "linear-gradient(135deg,#7b0039,#c2185b,#f56a2a)",
-                  p: 3,
-                  textAlign: "center",
-                }}
-              >
-                <Typography sx={{ fontSize: "2.5rem", lineHeight: 1, mb: 1 }}>💃</Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
-                    fontSize: "1.5rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  Girls
-                </Typography>
-                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.18)", borderRadius: 10, px: 2, py: 0.4, mt: 1 }}>
-                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
-                    Semi-Formal · Tropical Vibe
-                  </Typography>
-                </Box>
-              </Box>
-              <Box sx={{ p: 3, flexGrow: 1 }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 1,
-                    background: "rgba(194,24,91,0.12)",
-                    border: "1px solid rgba(194,24,91,0.3)",
-                    borderRadius: 2,
-                    px: 2,
-                    py: 1,
-                    mb: 2.5,
-                  }}
-                >
-                  <Typography sx={{ fontSize: "1rem" }}>🎁</Typography>
-                  <Typography sx={{ fontSize: "0.82rem", color: "#f48fb1", fontWeight: 600 }}>
-                    Attire will be provided
-                  </Typography>
-                </Box>
-                <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "0.87rem", lineHeight: 1.8 }}>
-                  Entourage ladies will be dressed in the event color palette. No additional outfit needed — attire is fully taken care of.
-                </Typography>
-              </Box>
-            </Box>
-
-            {/* Entourage Boys */}
-            <Box
-              sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid rgba(107,76,53,0.4)",
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(6px)",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Box
-                sx={{
-                  background: "linear-gradient(135deg,#1a0d07,#3d2b1f,#6b4c35)",
-                  p: 3,
-                  textAlign: "center",
-                }}
-              >
-                <Typography sx={{ fontSize: "2.5rem", lineHeight: 1, mb: 1 }}>🤵</Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
-                    fontSize: "1.5rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  Boys
-                </Typography>
-                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.12)", borderRadius: 10, px: 2, py: 0.4, mt: 1 }}>
-                  <Typography sx={{ color: "#f5deb3", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
-                    Barong Tagalog
-                  </Typography>
-                </Box>
-              </Box>
-              <Box sx={{ p: 3, flexGrow: 1 }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 1,
-                    background: "rgba(107,76,53,0.2)",
-                    border: "1px solid rgba(107,76,53,0.4)",
-                    borderRadius: 2,
-                    px: 2,
-                    py: 1,
-                    mb: 2.5,
-                  }}
-                >
-                  <Typography sx={{ fontSize: "1rem" }}>🎁</Typography>
-                  <Typography sx={{ fontSize: "0.82rem", color: "#d4a96a", fontWeight: 600 }}>
-                    Attire will be provided
-                  </Typography>
-                </Box>
-                <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "0.87rem", lineHeight: 1.8 }}>
-                  Entourage gentlemen will wear the traditional Filipino Barong Tagalog. Attire is coordinated and fully provided.
-                </Typography>
-              </Box>
-            </Box>
+            <Box sx={{ width: 30, height: 1, background: "#c4a882", mx: "auto" }} />
           </Box>
 
-          {/* ── Guests ── */}
-          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2, mb: 1 }}>
-            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15))" }} />
+          {/* Sponsors */}
+          <Typography sx={{ color: "#9a8872", fontSize: "0.65rem", letterSpacing: 3, textTransform: "uppercase", textAlign: "center", mb: 2.5 }}>
+            Sponsors &mdash; Own Attire
+          </Typography>
+
+          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, gap: 0, mb: 5 }}>
+            {[
+              { role: "Principal Sponsors", items: [
+                { gender: "Female", emoji: "💃", attire: "Deep Green", detail: "Semi-Formal · Tropical Vibe", colorHex: "#1f6b3a" },
+                { gender: "Male", emoji: "🤵", attire: "Barong Tagalog", detail: "Traditional Filipino Formal", colorHex: null },
+              ]},
+              { role: "Secondary Sponsors", items: [
+                { gender: "Female", emoji: "💃", attire: "Berry", detail: "Semi-Formal · Tropical Vibe", colorHex: "#c2185b" },
+                { gender: "Male", emoji: "🤵", attire: "Barong Tagalog", detail: "Traditional Filipino Formal", colorHex: null },
+              ]},
+            ].map(({ role, items }) => (
+              <Box key={role}>
+                <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "1.1rem", fontWeight: 600, color: "#3b2f1e", textAlign: "center", mb: 2, mt: 1 }}>
+                  {role}
+                </Typography>
+                {items.map(({ gender, emoji, attire, detail, colorHex }) => (
+                  <Box
+                    key={gender}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1.5,
+                      py: 1.5,
+                      px: 2,
+                      mx: { xs: 0, sm: 1 },
+                      borderBottom: "1px solid rgba(90,66,48,0.08)",
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "1.3rem", lineHeight: 1 }}>{emoji}</Typography>
+                    <Box sx={{ flex: 1 }}>
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 0.75 }}>
+                        <Typography sx={{ color: "#3b2f1e", fontSize: "0.85rem", fontWeight: 600 }}>{gender}</Typography>
+                        {colorHex && <Box sx={{ width: 10, height: 10, borderRadius: "50%", background: colorHex }} />}
+                      </Box>
+                      <Typography sx={{ color: "#9a8872", fontSize: "0.72rem" }}>{attire} &middot; {detail}</Typography>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            ))}
+          </Box>
+
+          {/* Entourage Members */}
+          <Typography sx={{ color: "#9a8872", fontSize: "0.65rem", letterSpacing: 3, textTransform: "uppercase", textAlign: "center", mb: 2.5 }}>
+            Entourage Members &mdash; Attire Provided
+          </Typography>
+
+          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, gap: 2, mb: { xs: 6, md: 8 } }}>
+            {[
+              { title: "Girls", emoji: "💃", style: "Semi-Formal · Tropical Vibe", desc: "Attire will be coordinated from the event color palette — no additional outfit needed." },
+              { title: "Boys", emoji: "🤵", style: "Barong Tagalog", desc: "Entourage gentlemen will wear the traditional Filipino Barong Tagalog — fully coordinated and provided." },
+            ].map(({ title, emoji, style, desc }) => (
+              <Box key={title} sx={{ textAlign: "center", py: 3, px: 2 }}>
+                <Typography sx={{ fontSize: "1.6rem", lineHeight: 1, mb: 0.75 }}>{emoji}</Typography>
+                <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", color: "#3b2f1e", fontSize: "1.2rem", fontWeight: 600 }}>
+                  {title}
+                </Typography>
+                <Typography sx={{ color: "#b5620a", fontSize: "0.62rem", letterSpacing: 1.5, textTransform: "uppercase", mt: 0.5, mb: 1.5 }}>
+                  {style}
+                </Typography>
+                <Box sx={{ display: "inline-flex", alignItems: "center", gap: 0.5, background: "rgba(181,98,10,0.08)", borderRadius: 10, px: 1.5, py: 0.4, mb: 1.5 }}>
+                  <Typography sx={{ fontSize: "0.75rem" }}>🎁</Typography>
+                  <Typography sx={{ fontSize: "0.7rem", color: "#b5620a", fontWeight: 600 }}>Provided</Typography>
+                </Box>
+                <Typography sx={{ color: "#6b5e4f", fontSize: "0.8rem", lineHeight: 1.7, maxWidth: 300, mx: "auto" }}>
+                  {desc}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+
+          {/* ── Guests Section ── */}
+          <Box sx={{ textAlign: "center", mb: 4 }}>
             <Typography
               sx={{
                 fontFamily: "'Cormorant Garamond',serif",
-                fontSize: "1.8rem",
-                fontWeight: 600,
-                color: "#fff",
-                letterSpacing: 2,
-                whiteSpace: "nowrap",
+                fontSize: { xs: "1.8rem", md: "2.4rem" },
+                fontWeight: 300,
+                color: "#3b2f1e",
+                mb: 0.5,
               }}
             >
               Guests
             </Typography>
-            <Box sx={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(255,255,255,0.15), transparent)" }} />
+            <Box sx={{ width: 30, height: 1, background: "#c4a882", mx: "auto", mb: 1 }} />
+            <Typography sx={{ color: "#9a8872", fontSize: "0.72rem", letterSpacing: 1.5, textTransform: "uppercase" }}>
+              Attire not provided &mdash; dress within the color palette
+            </Typography>
           </Box>
-          <Typography sx={{ textAlign: "center", color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", mb: 5, letterSpacing: 1, textTransform: "uppercase" }}>
-            Attire not provided — please dress within the color palette
-          </Typography>
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-              gap: 4,
-            }}
-          >
-            {/* Guest Women */}
-            <Box
-              sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid rgba(200,149,108,0.25)",
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(6px)",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Box
-                sx={{
-                  background: "linear-gradient(135deg,#7a2e00,#c2641a,#f4a261)",
-                  p: 3.5,
-                  textAlign: "center",
-                }}
-              >
-                <Typography sx={{ fontSize: "3rem", lineHeight: 1, mb: 1 }}>👒</Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
-                    fontSize: "1.7rem",
-                    fontWeight: 700,
-                    letterSpacing: 0.5,
-                  }}
-                >
-                  Women
-                </Typography>
-                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.18)", borderRadius: 10, px: 2.5, py: 0.5, mt: 1 }}>
-                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+
+          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" }, gap: { xs: 4, md: 6 } }}>
+            {/* Women */}
+            <Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }}>
+                <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>👒</Typography>
+                <Box>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", color: "#3b2f1e", fontSize: "1.4rem", fontWeight: 600, lineHeight: 1.2 }}>
+                    Women
+                  </Typography>
+                  <Typography sx={{ color: "#b5620a", fontSize: "0.6rem", letterSpacing: 1.5, textTransform: "uppercase" }}>
                     Semi-Formal · Summer Chic
                   </Typography>
                 </Box>
               </Box>
-              <Box sx={{ p: 3.5, flexGrow: 1 }}>
-                {[
-                  { icon: "✨", text: "Semi-formal, summer chic style" },
-                  { icon: "🎨", text: "Dress within the event color palette" },
-                  { icon: "🤍", text: "Please avoid white — reserved for the bride" },
-                  { icon: "👗", text: "Midi or floor-length dresses or jumpsuits" },
-                  { icon: "🌿", text: "Lightweight, breathable fabrics encouraged" },
-                  { icon: "👡", text: "Dressy sandals are perfectly fine" },
-                ].map(({ icon, text }) => (
-                  <Box
-                    key={text}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1.5,
-                      py: 1.1,
-                      borderBottom: "1px solid rgba(200,149,108,0.1)",
-                      "&:last-child": { borderBottom: "none" },
-                    }}
-                  >
-                    <Typography sx={{ fontSize: "1.1rem", flexShrink: 0 }}>{icon}</Typography>
-                    <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.87rem", lineHeight: 1.6 }}>
-                      {text}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
+              {[
+                "Semi-formal, summer chic style",
+                "Dress within the event color palette",
+                "Please avoid white — reserved for the bride",
+                "Midi or floor-length dresses or jumpsuits",
+                "Lightweight, breathable fabrics encouraged",
+                "Dressy sandals are perfectly fine",
+              ].map((text) => (
+                <Box key={text} sx={{ display: "flex", alignItems: "flex-start", gap: 1.5, mb: 1.2 }}>
+                  <Box sx={{ width: 4, height: 4, borderRadius: "50%", background: "#c4a882", mt: "8px", flexShrink: 0 }} />
+                  <Typography sx={{ color: "#6b5e4f", fontSize: "0.85rem", lineHeight: 1.65 }}>
+                    {text}
+                  </Typography>
+                </Box>
+              ))}
             </Box>
 
-            {/* Guest Men */}
-            <Box
-              sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid rgba(44,85,61,0.3)",
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(6px)",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Box
-                sx={{
-                  background: "linear-gradient(135deg,#0a1f14,#1a3d2b,#5C9E7B)",
-                  p: 3.5,
-                  textAlign: "center",
-                }}
-              >
-                <Typography sx={{ fontSize: "3rem", lineHeight: 1, mb: 1 }}>👔</Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
-                    fontSize: "1.7rem",
-                    fontWeight: 700,
-                    letterSpacing: 0.5,
-                  }}
-                >
-                  Men
-                </Typography>
-                <Box sx={{ display: "inline-block", background: "rgba(255,255,255,0.12)", borderRadius: 10, px: 2.5, py: 0.5, mt: 1 }}>
-                  <Typography sx={{ color: "#fff", fontSize: "0.7rem", letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>
+            {/* Men */}
+            <Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }}>
+                <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>👔</Typography>
+                <Box>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", color: "#3b2f1e", fontSize: "1.4rem", fontWeight: 600, lineHeight: 1.2 }}>
+                    Men
+                  </Typography>
+                  <Typography sx={{ color: "#b5620a", fontSize: "0.6rem", letterSpacing: 1.5, textTransform: "uppercase" }}>
                     Smart Casual · Resort Formal
                   </Typography>
                 </Box>
               </Box>
-              <Box sx={{ p: 3.5, flexGrow: 1 }}>
-                {[
-                  { icon: "✨", text: "Smart casual or resort formal style" },
-                  { icon: "🎨", text: "Dress within the event color palette" },
-                  { icon: "👕", text: "Linen or lightweight button-down shirts in tropical tones" },
-                  { icon: "👖", text: "Slacks or chino trousers preferred" },
-                  { icon: "👞", text: "Loafers, boat shoes, or dressy sandals encouraged" },
-                ].map(({ icon, text }) => (
-                  <Box
-                    key={text}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1.5,
-                      py: 1.1,
-                      borderBottom: "1px solid rgba(44,85,61,0.15)",
-                      "&:last-child": { borderBottom: "none" },
-                    }}
-                  >
-                    <Typography sx={{ fontSize: "1.1rem", flexShrink: 0 }}>{icon}</Typography>
-                    <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.87rem", lineHeight: 1.6 }}>
-                      {text}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
+              {[
+                "Smart casual or resort formal style",
+                "Dress within the event color palette",
+                "Linen or lightweight button-down shirts in tropical tones",
+                "Slacks or chino trousers preferred",
+                "Loafers, boat shoes, or dressy sandals encouraged",
+              ].map((text) => (
+                <Box key={text} sx={{ display: "flex", alignItems: "flex-start", gap: 1.5, mb: 1.2 }}>
+                  <Box sx={{ width: 4, height: 4, borderRadius: "50%", background: "#c4a882", mt: "8px", flexShrink: 0 }} />
+                  <Typography sx={{ color: "#6b5e4f", fontSize: "0.85rem", lineHeight: 1.65 }}>
+                    {text}
+                  </Typography>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Container>
@@ -1262,14 +1062,12 @@ export default function App() {
         id="stay"
         sx={{
           py: 12,
-          background: "linear-gradient(160deg, #0d2a1a 0%, #102d2e 50%, #0e2535 100%)",
+          background: "#FFF7E8",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Decorative glows */}
-        <Box sx={{ position: "absolute", top: "0%", right: "10%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(92,158,123,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", bottom: "5%", left: "5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(244,162,97,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+
 
         <Container maxWidth="lg" sx={{ position: "relative" }}>
           {/* Header */}
@@ -1280,18 +1078,18 @@ export default function App() {
                 fontFamily: "'Cormorant Garamond',serif",
                 fontSize: { xs: "2.2rem", md: "3.2rem" },
                 fontWeight: 700,
-                color: "#fff",
+                color: "#3b2f1e",
                 letterSpacing: 1,
               }}
             >
               Where to Stay
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1.5, mt: 1.5 }}>
-              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, transparent, rgba(92,158,123,0.6))" }} />
+              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #c4a882)", borderRadius: 2 }} />
               <Typography sx={{ fontSize: "1rem", lineHeight: 1 }}>🌺</Typography>
-              <Box sx={{ width: 48, height: 1, background: "linear-gradient(90deg, rgba(244,162,97,0.6), transparent)" }} />
+              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, #F4A261, transparent)", borderRadius: 2 }} />
             </Box>
-            <Typography sx={{ color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", mt: 2, letterSpacing: 1.5, textTransform: "uppercase" }}>
+            <Typography sx={{ color: "#9a8872", fontSize: "0.85rem", mt: 2, letterSpacing: 1.5, textTransform: "uppercase" }}>
               Recommended accommodations on Bantayan Island
             </Typography>
           </Box>
@@ -1310,8 +1108,8 @@ export default function App() {
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", mb: 2 }}>
                   <Box sx={{
                     width: 52, height: 52, borderRadius: "14px",
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.12)",
+                    background: "linear-gradient(135deg, rgba(196,168,130,0.15), rgba(244,162,97,0.1))",
+                    border: "1px solid rgba(90,66,48,0.15)",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: "1.6rem", flexShrink: 0,
                   }}>
@@ -1319,10 +1117,10 @@ export default function App() {
                   </Box>
                   <Box sx={{
                     px: 1.5, py: 0.5, borderRadius: "100px",
-                    background: "rgba(244,162,97,0.12)",
-                    border: "1px solid rgba(244,162,97,0.25)",
+                    background: "rgba(244,162,97,0.15)",
+                    border: "1px solid rgba(244,162,97,0.35)",
                   }}>
-                    <Typography sx={{ color: "#F4A261", fontSize: "0.68rem", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase" }}>
+                    <Typography sx={{ color: "#b5620a", fontSize: "0.68rem", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase" }}>
                       {tag}
                     </Typography>
                   </Box>
@@ -1332,7 +1130,7 @@ export default function App() {
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond',serif",
-                    color: "#fff",
+                    color: "#3b2f1e",
                     fontSize: "1.25rem",
                     fontWeight: 700,
                     mb: 0.75,
@@ -1344,17 +1142,17 @@ export default function App() {
 
                 {/* Location */}
                 <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mb: 1.5 }}>
-                  <PlaceIcon sx={{ fontSize: 13, color: "#7dc9a0" }} />
-                  <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "0.78rem", letterSpacing: 0.3 }}>
+                  <PlaceIcon sx={{ fontSize: 13, color: "#5a4230" }} />
+                  <Typography sx={{ color: "#9a8872", fontSize: "0.78rem", letterSpacing: 0.3 }}>
                     {location}
                   </Typography>
                 </Box>
 
                 {/* Divider */}
-                <Box sx={{ width: "100%", height: "1px", background: "rgba(255,255,255,0.08)", mb: 1.5 }} />
+                <Box sx={{ width: "100%", height: "1px", background: "rgba(90,66,48,0.1)", mb: 1.5 }} />
 
                 {/* Description */}
-                <Typography sx={{ color: "rgba(255,255,255,0.65)", fontSize: "0.875rem", lineHeight: 1.75, flexGrow: 1, mb: 2.5 }}>
+                <Typography sx={{ color: "#6b5e4f", fontSize: "0.875rem", lineHeight: 1.75, flexGrow: 1, mb: 2.5 }}>
                   {desc}
                 </Typography>
 
@@ -1371,9 +1169,9 @@ export default function App() {
                     px: 2,
                     py: 1,
                     borderRadius: "100px",
-                    border: "1px solid rgba(125,201,160,0.35)",
-                    background: "rgba(125,201,160,0.08)",
-                    color: "#7dc9a0",
+                    border: "1px solid rgba(90,66,48,0.3)",
+                    background: "rgba(90,66,48,0.06)",
+                    color: "#5a4230",
                     fontSize: "0.75rem",
                     fontWeight: 700,
                     letterSpacing: 0.8,
@@ -1381,8 +1179,8 @@ export default function App() {
                     textDecoration: "none",
                     transition: "all 0.2s ease",
                     "&:hover": {
-                      background: "rgba(125,201,160,0.18)",
-                      borderColor: "rgba(125,201,160,0.6)",
+                      background: "rgba(90,66,48,0.12)",
+                      borderColor: "#5a4230",
                     },
                   }}
                 >
@@ -1401,14 +1199,12 @@ export default function App() {
         id="gallery"
         sx={{
           py: 12,
-          background: "linear-gradient(160deg, #fdf6ee 0%, #fff8f0 50%, #fef3e6 100%)",
+          background: "#FFF7E8",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Decorative blobs */}
-        <Box sx={{ position: "absolute", top: -60, right: -60, width: 320, height: 320, borderRadius: "50%", background: "rgba(244,162,97,0.07)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", bottom: -80, left: -40, width: 280, height: 280, borderRadius: "50%", background: "rgba(92,158,123,0.07)", pointerEvents: "none" }} />
+
 
         <Container maxWidth="lg" sx={{ position: "relative" }}>
           {/* Header */}
@@ -1419,14 +1215,14 @@ export default function App() {
                 fontFamily: "'Cormorant Garamond',serif",
                 fontSize: { xs: "2.2rem", md: "3.2rem" },
                 fontWeight: 700,
-                color: "#2C553D",
+                color: "#5a4230",
                 letterSpacing: 1,
               }}
             >
               Our Moments
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1.5, mt: 1.5 }}>
-              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #5C9E7B)", borderRadius: 2 }} />
+              <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #c4a882)", borderRadius: 2 }} />
               <Typography sx={{ fontSize: "1.1rem", lineHeight: 1 }}>🌺</Typography>
               <Box sx={{ width: 48, height: 2, background: "linear-gradient(90deg, #F4A261, transparent)", borderRadius: 2 }} />
             </Box>
@@ -1468,35 +1264,33 @@ export default function App() {
       <Box
         id="rsvp"
         sx={{
-          py: 12,
-          background: "linear-gradient(160deg, #0d2318 0%, #112b1f 50%, #0f2419 100%)",
+          py: { xs: 6, md: 12 },
+          background: "#FFF7E8",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Glows */}
-        <Box sx={{ position: "absolute", top: "10%", left: "5%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(92,158,123,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <Box sx={{ position: "absolute", bottom: "5%", right: "5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(244,162,97,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+
 
         <Container maxWidth="lg" sx={{ position: "relative" }}>
           <Box sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", md: "1fr 1.1fr" },
-            gap: { xs: 6, md: 8 },
+            gap: { xs: 4, md: 8 },
             alignItems: "center",
           }}>
 
             {/* ── Left panel ── */}
             <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
-              <Typography sx={{ fontSize: "3rem", mb: 1, lineHeight: 1 }}>💌</Typography>
+              <Typography sx={{ fontSize: { xs: "2rem", md: "3rem" }, mb: 0.5, lineHeight: 1 }}>💌</Typography>
               <Typography
                 sx={{
                   fontFamily: "'Cormorant Garamond',serif",
-                  fontSize: { xs: "2.8rem", md: "4rem" },
+                  fontSize: { xs: "2.2rem", md: "4rem" },
                   fontWeight: 700,
-                  color: "#fff",
+                  color: "#3b2f1e",
                   lineHeight: 1,
-                  mb: 1,
+                  mb: 0.5,
                 }}
               >
                 Join Us
@@ -1504,27 +1298,27 @@ export default function App() {
               <Typography
                 sx={{
                   fontFamily: "'Cormorant Garamond',serif",
-                  fontSize: { xs: "1.3rem", md: "1.6rem" },
-                  color: "#F4A261",
+                  fontSize: { xs: "1.1rem", md: "1.6rem" },
+                  color: "#b5620a",
                   fontStyle: "italic",
-                  mb: 3,
+                  mb: { xs: 2, md: 3 },
                 }}
               >
                 Christian & Vanessa
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 4 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mb: { xs: 2, md: 4 } }}>
                 {[
                   { emoji: "📅", text: "September 26, 2026" },
                   { emoji: "📍", text: "Bantayan Island, Cebu" },
-                  { emoji: "⏰", text: "10:00 AM – Ceremony" },
-                  { emoji: "🥂", text: "12:00 PM – Reception" },
+                  { emoji: "⏰", text: "3:00 PM – Ceremony" },
+                  { emoji: "🥂", text: "6:00 PM – Reception" },
                 ].map(({ emoji, text }) => (
                   <Box key={text} sx={{ display: "flex", alignItems: "center", gap: 1.5, justifyContent: { xs: "center", md: "flex-start" } }}>
-                    <Box sx={{ width: 36, height: 36, borderRadius: "10px", background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1rem", flexShrink: 0 }}>
+                    <Box sx={{ width: { xs: 30, md: 36 }, height: { xs: 30, md: 36 }, borderRadius: "10px", background: "rgba(90,66,48,0.08)", border: "1px solid rgba(90,66,48,0.15)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: { xs: "0.85rem", md: "1rem" }, flexShrink: 0 }}>
                       {emoji}
                     </Box>
-                    <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}>
+                    <Typography sx={{ color: "#6b5e4f", fontSize: { xs: "0.82rem", md: "0.9rem" } }}>
                       {text}
                     </Typography>
                   </Box>
@@ -1534,12 +1328,12 @@ export default function App() {
               {/* Deadline badge */}
               <Box sx={{
                 display: "inline-flex", alignItems: "center", gap: 1,
-                px: 2.5, py: 1.2, borderRadius: "100px",
-                border: "1px solid rgba(244,162,97,0.35)",
-                background: "rgba(244,162,97,0.08)",
+                px: 2, py: 1, borderRadius: "100px",
+                border: "1px solid rgba(181,98,10,0.3)",
+                background: "rgba(181,98,10,0.07)",
               }}>
-                <Typography sx={{ fontSize: "0.85rem" }}>🗓️</Typography>
-                <Typography sx={{ color: "#F4A261", fontSize: "0.8rem", fontWeight: 700, letterSpacing: 0.5 }}>
+                <Typography sx={{ fontSize: "0.8rem" }}>🗓️</Typography>
+                <Typography sx={{ color: "#b5620a", fontSize: { xs: "0.75rem", md: "0.8rem" }, fontWeight: 700, letterSpacing: 0.5 }}>
                   Kindly respond by June 30, 2026
                 </Typography>
               </Box>
@@ -1548,16 +1342,16 @@ export default function App() {
             {/* ── Right panel — Form ── */}
             <Paper
               sx={{
-                borderRadius: "24px",
-                p: { xs: 3, md: 5 },
+                borderRadius: { xs: "16px", md: "24px" },
+                p: { xs: 2.5, md: 5 },
                 background: "#fff",
-                boxShadow: "0 24px 80px rgba(0,0,0,0.35)",
+                boxShadow: "0 8px 40px rgba(90,66,48,0.12), 0 2px 8px rgba(90,66,48,0.06)",
               }}
             >
               {submitted ? (
                 <Box sx={{ textAlign: "center", py: 5 }}>
                   <Typography sx={{ fontSize: "4rem", mb: 2 }}>🌺</Typography>
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "2.2rem", color: "#2C553D", fontWeight: 700, mb: 1 }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "2.2rem", color: "#5a4230", fontWeight: 700, mb: 1 }}>
                     Thank you!
                   </Typography>
                   <Typography sx={{ color: "#7a6555", lineHeight: 1.7, fontSize: "0.95rem" }}>
@@ -1567,7 +1361,7 @@ export default function App() {
               ) : (
                 <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
 
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "1.6rem", fontWeight: 700, color: "#2C553D", mb: 0.5 }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "1.6rem", fontWeight: 700, color: "#5a4230", mb: 0.5 }}>
                     Your Details
                   </Typography>
 
@@ -1678,7 +1472,7 @@ export default function App() {
       {/* ── FOOTER ──────────────────────────────────── */}
       <Box
         sx={{
-          background: "linear-gradient(135deg,#1a3d2b,#0d2d4a)",
+          background: "linear-gradient(135deg,#2b1f14,#1a140d)",
           color: "#fff",
           textAlign: "center",
           py: 8,

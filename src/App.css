@@ -6,10 +6,10 @@
 }
 
 .navbar-solid {
-  background: linear-gradient(135deg, #1a3d2b 0%, #2C553D 55%, #1f4a34 100%) !important;
-  backdrop-filter: blur(10px) !important;
-  box-shadow: 0 2px 0 rgba(244,162,97,0.45), 0 4px 24px rgba(0,0,0,0.28) !important;
-  border-bottom: 2px solid rgba(244,162,97,0.5) !important;
+  background: linear-gradient(135deg, #2b1f14 0%, #3d2e1e 55%, #4a3828 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 0 rgba(196,168,130,0.25), 0 4px 28px rgba(0,0,0,0.32) !important;
+  border-bottom: 2px solid rgba(196,168,130,0.3) !important;
   transition: all 0.4s ease !important;
 }
 
@@ -145,7 +145,7 @@
   padding: 0 !important;
   text-align: center;
   border: none !important;
-  box-shadow: 0 6px 32px rgba(44,85,61,0.10), 0 1px 4px rgba(0,0,0,0.06) !important;
+  box-shadow: 0 6px 32px rgba(90,66,48,0.10), 0 1px 4px rgba(0,0,0,0.06) !important;
   height: 100%;
   background: #fff !important;
   overflow: hidden !important;
@@ -157,7 +157,7 @@
   content: '';
   display: block;
   height: 5px;
-  background: linear-gradient(90deg, #2C553D, #5C9E7B, #F4A261, #E76F51);
+  background: linear-gradient(90deg, #5a4230, #c4a882, #F4A261, #E76F51);
   border-radius: 20px 20px 0 0;
 }
 
@@ -167,7 +167,7 @@
 
 .story-card:hover {
   transform: translateY(-6px) !important;
-  box-shadow: 0 20px 48px rgba(44,85,61,0.16), 0 4px 12px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 20px 48px rgba(90,66,48,0.16), 0 4px 12px rgba(0,0,0,0.08) !important;
 }
 
 .story-icon-wrap {
@@ -181,7 +181,7 @@
   justify-content: center;
   margin: 0 auto 20px;
   font-size: 2rem;
-  box-shadow: 0 4px 16px rgba(44,85,61,0.1);
+  box-shadow: 0 4px 16px rgba(90,66,48,0.1);
 }
 
 /* ─── VENUE CARDS ────────────────────────────────── */
@@ -305,7 +305,7 @@
 .day-timeline-line {
   flex: 1;
   height: 1px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(90,66,48,0.2);
   position: relative;
   top: -24px;
   margin: 0 -4px;
@@ -336,17 +336,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  border: 1px solid rgba(90,66,48,0.13);
+  box-shadow: 0 4px 20px rgba(90,66,48,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .stay-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.09);
-  border-color: rgba(125,201,160,0.3);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px rgba(125,201,160,0.15);
+  transform: translateY(-6px);
+  border-color: rgba(90,66,48,0.28);
+  box-shadow: 0 20px 56px rgba(90,66,48,0.14), 0 4px 12px rgba(0,0,0,0.06);
 }
 
 /* ─── GALLERY GRID ───────────────────────────────── */
@@ -435,21 +434,21 @@
 
 /* ─── RSVP ───────────────────────────────────────── */
 .rsvp-submit-btn {
-  background: linear-gradient(135deg, #2C553D, #4a8c68) !important;
+  background: linear-gradient(135deg, #5a4230, #8a7560) !important;
   color: #fff !important;
   padding: 15px 48px !important;
   font-size: 0.95rem !important;
   font-weight: 700 !important;
   letter-spacing: 1.5px !important;
   border-radius: 50px !important;
-  box-shadow: 0 6px 28px rgba(44, 85, 61, 0.4) !important;
+  box-shadow: 0 6px 28px rgba(90, 66, 48, 0.4) !important;
   width: 100% !important;
   transition: all 0.3s ease !important;
   text-transform: uppercase !important;
 }
 
 .rsvp-submit-btn:hover {
-  box-shadow: 0 12px 36px rgba(44, 85, 61, 0.55) !important;
+  box-shadow: 0 12px 36px rgba(90, 66, 48, 0.55) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -466,14 +465,14 @@
 }
 
 .rsvp-attendance-card:hover {
-  border-color: #5C9E7B;
+  border-color: #c4a882;
   background: rgba(92,158,123,0.05);
 }
 
 .rsvp-attendance-card.selected-yes {
-  border-color: #2C553D;
-  background: rgba(44,85,61,0.07);
-  box-shadow: 0 4px 16px rgba(44,85,61,0.15);
+  border-color: #5a4230;
+  background: rgba(90,66,48,0.07);
+  box-shadow: 0 4px 16px rgba(90,66,48,0.15);
 }
 
 .rsvp-attendance-card.selected-no {
