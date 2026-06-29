@@ -2115,7 +2115,7 @@ export default function App() {
                     letterSpacing: 0.5,
                   }}
                 >
-                  Kindly respond by June 30, 2026
+                  Kindly respond by July 31, 2026
                 </Typography>
               </Box>
             </Box>
